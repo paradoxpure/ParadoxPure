@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ParadoxPure Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* CSS styles here */
+
+    /* Header styles */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    header img {
+      height: 50px;
+      width: 50px;
+    }
+
+    /* Menu bar styles */
+    .menu-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #ffffff;
+      padding: 20px;
+      transform: translateY(100%); /* Initially hidden */
+      transition: transform 0.3s ease-in-out;
+      z-index: 9999;
+    }
+
+    .menu-bar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-bar ul li {
+      margin-bottom: 10px;
+    }
+
+    .menu-bar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Section styles */
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    section h2 {
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Icon styles */
+    .menu-icon {
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      padding: -10px -100px;
+      margin : -10px;
+    }
+  </style>
+  <script>
+    // JavaScript to toggle the visibility of the menu bar
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuBar = document.getElementById('menu-bar');
+      var menuIcon = document.getElementById('menu-icon');
+
+      menuIcon.addEventListener('click', function() {
+        menuBar.style.transform = menuBar.style.transform === 'translateY(100%)' ? 'translateY(0)' : 'translateY(100%)';
+      });
+
+      // Hide menu bar when clicked outside
+      window.addEventListener('click', function(e) {
+        if (!menuBar.contains(e.target) && e.target !== menuIcon) {
+          menuBar.style.transform = 'translateY(100%)';
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="/logo.png" alt="Wick Bot">
+    <h1>Wick Bot Documentation</h1>
+    <span id="menu-icon" class="menu-icon">&#9776;</span>
+  </header>
+
+  <div class="menu-bar" id="menu-bar">
+    <ul>
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#commands">Commands</a></li>
+      <li><a href="#configuration">Configuration</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section id="getting-started">
+      <h2>Getting Started</h2>
+      <p>Hey , i am ParadoxPure , a best music bot.<br>Why Use Us...?<br>• Best Music Bot<br>• 100% Pure & Good Quality Songs<br>• 100% Free & No Premium Required<br>• Easy To Use<br><br>Here My Information:-<br>Name - !  ParadoxPure<br>Prefix , And /<br>Owner !  Manish </></p>
+    </section>
+
+    <section id="commands">
+      <h2>Commands</h2>
+    <h2>Music Commands Documentation</h2>
+
+<p>
+  The ParadoxPure Bot offers a variety of music commands to enhance your music listening experience in your server. The prefix for all music commands is a comma (,). Below is a list of available music commands along with their explanations:
+</p>
+
+<ul>
+  <li>
+    <b>Play:</b> play <song name or URL><br>
+    The play command allows you to play a song in your voice channel. You can specify the name of the song or provide a YouTube URL as the argument. The bot will search for the song and add it to the queue.
+  </li>
+  
+  <li>
+    <b>CQueue:</b> cqueue<br>
+    The cqueue command displays the current queue of songs in a compact format. It shows the upcoming songs in a concise list.
+  </li>
+  
+  <li>
+    <b>Join:</b> join<br>
+    The join command makes the bot join the voice channel you are currently in. This is necessary for the bot to play music in your server.
+  </li>
+  
+  <li>
+    <b>Jump:</b> jump <position><br>
+    The jump command allows you to skip to a specific position in the queue. Provide the position number as the argument to jump directly to that song in the queue.
+  </li>
+  
+  <li>
+    <b>Loop:</b> loop<br>
+    The loop command toggles the looping of the currently playing song. When looped, the current song will repeat indefinitely until you disable the loop.
+  </li>
+  
+  <li>
+    <b>Pause:</b> pause<br>
+    The pause command pauses the currently playing song. You can use the resume command to continue playing the paused song.
+  </li>
+  
+  <li>
+    <b>Queue:</b> queue<br>
+    The queue command displays the current queue of songs. It shows the upcoming songs and their order in the queue.
+  </li>
+  
+  <li>
+    <b>Radio:</b> radio <radio station><br>
+    The radio command plays a radio station of your choice. Specify the radio station as the argument, and the bot will search for it and start playing the station.
+  </li>
+  
+  <li>
+    <b>Remove:</b> remove <position><br>
+    The remove command allows you to remove a specific song from the queue. Provide the position number of the song as the argument to remove it from the queue.
+  </li>
+  
+  <li>
+    <b>Repeat:</b> repeat<br>
+    The repeat command toggles the repeating of the entire queue. When enabled, the entire queue will repeat once it finishes playing.
+  </li>
+  
+  <li>
+    <b>Seek:</b> seek <time><br>
+    The seek command allows you to seek to a specific time in the currently playing song. Provide the time in the format HH:MM:SS or MM:SS.
+  </li>
+  
+  <li>
+    <b>Shuffle:</b> shuffle<br>
+    The shuffle command shuffles the songs in the queue, changing their order randomly. This provides a randomized listening experience.
+  </li>
+  
+  <li>
+    <b>Skip:</b> skip<br>
+    The skip command allows you to skip the currently playing song and move to the next song in the queue.
+  </li>
+  
+  <li>
+    <b>Spotify:</b> spotify <playlist/album/track URL><br>
+    The spotify command allows you to play music directly from a Spotify playlist, album, or track. Provide the corresponding URL as the argument.
+  </li>
+  
+  <li>
+    <b>Stop:</b> stop<br>
+    The stop command stops the playback of the current song and clears the queue.
+  </li>
+  
+  <li>
+    <b>Volume:</b> volume <percentage><br>
+    The volume command allows you to adjust the volume of the bot. Specify the desired volume percentage as the argument.
+  </li>
+</ul>
+
+<!-- Rest of the documentation -->
+
+
+    </section>
+
+    <section id="configuration">
+      <h2>Configuration</h2>
+      <h2>Other Commands Documentation</h2>
+
+<p>
+  The ParadoxPure Bot offers a variety of music commands to enhance your music listening experience in your server. The prefix for all music commands is a comma (,). Below is a list of available music commands along with their explanations:
+</p>
+
+<ul>
+  <li>
+    <b>Invite:</b> invite<br>
+    The invite command provides you with the invite link for adding Wick Bot to your server.
+  </li>
+  
+  <li>
+    <b>Vote:</b> vote<br>
+    The vote command provides you with the link to vote for Wick Bot on the bot listing website.
+  </li>
+  
+  <li>
+    <b>Help:</b> help<br>
+    The help command displays the list of available music commands and their explanations.
+  </li>
+  
+  <li>
+    <b>Ping:</b> ping<br>
+    The ping command measures the bot's latency or response time to Discord.
+  </li>
+  
+  <li>
+    <b>Avatar:</b> avatar [user mention]<br>
+    The avatar command displays the avatar or profile picture of a specified user. If no user is mentioned, it shows your own avatar.
+  </li>
+  
+  <li>
+    <b>Banner:</b> banner [user mention]<br>
+    The banner command displays the banner or profile cover image of a specified user. If no user is mentioned, it shows your own banner.
+  </li>
+  
+  <li>
+    <b>ServerAvatar:</b> serveravatar<br>
+    The serveravatar command displays the avatar or server icon of the current server.
+  </li>
+  
+  <li>
+    <b>Stats:</b> stats<br>
+    The stats command displays the statistics and information about Wick Bot.
+  </li>
+  
+  <li>
+    <b>MemberCount:</b> membercount<br>
+    The membercount command shows the total number of members in the current server.
+  </li>
+</ul>
+
+<!-- Rest of the documentation -->
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 Wick Bot. All rights reserved.</p>
+  </footer>
+</body>
+</html>
